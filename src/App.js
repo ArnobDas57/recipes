@@ -106,13 +106,17 @@ function App() {
   const removeRecipe = id => {
     deleteDoc(doc(db, "recipes", id));
   }
-
+  
   return (
     <div className="App">
       <div className="title">
-        <h1>My Recipes</h1>
+        <h1>
+          My Recipes
+        </h1>
       </div>
-      <button onClick={() => setPopupActive(!popupActive)}>Add recipe</button>
+      <button onClick={() => setPopupActive(!popupActive)}>
+        Add recipe
+      </button>
       <div className="recipes">
         {recipes.map((recipe, i) => (
           <div className="recipe" key={recipe.id}>
